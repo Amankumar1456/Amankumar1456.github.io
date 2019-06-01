@@ -1,155 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    <meta charset="UTF-8">
+    <title>amazing navbar</title>
+    <style>
+     @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
 }
-</style>
+body {
+
+  background-image: url(AllTheImages/blacka.jpeg);
+  margin: 0;
+  background-size: cover;
+
+}
+
+nav {
+  --duration: .5s;
+  --easing: ease-in-out;
+  position: relative;
+  width: 220px;
+  margin: 20px;
+}
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: -4px 0 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav a:hover {
+  background: #efefef;
+}
+nav .sub-menu a {
+  font-size: .9em;
+  color: #666666;
+  border-left: 2em solid white;
+  padding: .75em;
+  background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+}
+nav .sub-menu a:hover {
+  background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+}
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav header span {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  float: right;
+}
+nav footer button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: calc(1em - 2px);
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing);
+  transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+  cursor: pointer;
+  outline: none;
+  background: #cdcdcd;
+  opacity: 0;
+}
+nav.closed a,
+nav.closed header {
+  transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+  transition-delay: var(--delay-in);
+  color: transparent;
+}
+nav.closed footer button {
+  transition-delay: 0s;
+  transform: scaleY(0.7) scaleX(0.2);
+}
+
+    
+    </style>
 </head>
-<body onload="startGame()">
+<body>
+   
+    <nav class="menu">
+    <header>Menu <span>×</span></header>
+    <ol>
+        <li class="menu-item"><a href="#0">Home</a></li>
+        <li class="menu-item"><a href="#0">About</a></li>
+        <li class="menu-item">
+            <a href="#0">Widgets</a>
+            <ol class="sub-menu">
+                <li class="menu-item"><a href="#0">Grocerry</a></li>
+                <li class="menu-item"><a href="#0">Discount</a></li>
+                <li class="menu-item"><a href="#0">Huge Sale</a></li>
+            </ol>
+        </li>
+        <li class="menu-item">
+            <a href="#0">Juice</a>
+            <ol class="sub-menu">
+                <li class="menu-item"><a href="#0">Russi</a></li>
+                <li class="menu-item"><a href="#0">Paneer Pyaza</a></li>
+                <li class="menu-item"><a href="#0">Rasbhari</a></li>
+            </ol>
+        </li>
+        <li class="menu-item"><a href="#0">Contact</a></li>
+    </ol>
+    <footer><button aria-label="Toggle Menu">Toggle</button></footer>
+</nav> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
+    
+   var $els = $('.menu a, .menu header');
+var count = $els.length;
+var grouplength = Math.ceil(count/3);
+var groupNumber = 0;
+var i = 1;
+$('.menu').css('--count',count+'');
+$els.each(function(j){
+    if ( i > grouplength ) {
+        groupNumber++;
+        i=1;
+    }
+    $(this).attr('data-group',groupNumber);
+    i++;
+});
 
-var myGamePiece;
-var myObstacles = [];
-var myScore;
+$('.menu footer button').on('click',function(e){
+    e.preventDefault();
+    $els.each(function(j){
+        $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+        $(this).css('--delay-in',j*.1+'s');
+        $(this).css('--delay-out',(count-j)*.1+'s');
+    });
+    $('.menu').toggleClass('closed');
+    e.stopPropagation();
+});
 
-function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
-    myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-    myGameArea.start();
-}
-
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
-        },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
-
-function component(width, height, color, x, y, type) {
-    this.type = type;
-    this.score = 0;
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
-    this.x = x;
-    this.y = y;
-    this.gravity = 0;
-    this.gravitySpeed = 0;
-    this.update = function() {
-        ctx = myGameArea.context;
-        if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
-        } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    }
-    this.newPos = function() {
-        this.gravitySpeed += this.gravity;
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
-    }
-    this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
-        if (this.y > rockbottom) {
-            this.y = rockbottom;
-            this.gravitySpeed = 0;
-        }
-    }
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
-}
-
-function updateGameArea() {
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            return;
-        } 
-    }
-    myGameArea.clear();
-    myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        x = myGameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
-        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
-    }
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -1;
-        myObstacles[i].update();
-    }
-    myScore.text="SCORE: " + myGameArea.frameNo;
-    myScore.update();
-    myGamePiece.newPos();
-    myGamePiece.update();
-}
-
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
-    return false;
-}
-
-function accelerate(n) {
-    myGamePiece.gravity = n;
-}
+// run animation once at beginning for demo
+setTimeout(function(){
+    $('.menu footer button').click();
+    setTimeout(function(){
+        $('.menu footer button').click();
+    }, (count * 100) + 500 );
+}, 1000);
+ 
+    
 </script>
-<br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
-<p>Use the ACCELERATE button to stay in the air</p>
-<p>How long can you stay alive?</p>
-<a href="letsGiveItAFairTry.html">LINK</a>
 </body>
 </html>
