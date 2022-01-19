@@ -1,6 +1,5 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Amankumar1456/amankumar1456.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Aman Kumar
+I'm a Techno-Management Guy.Have a knack for problem-solving and Project Planning.Enjoy to innovate and implement real life solutions.My aim is to develop a solution for the benefit of the society.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
