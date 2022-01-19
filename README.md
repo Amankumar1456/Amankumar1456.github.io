@@ -1,3 +1,4 @@
+![myPic](./Hi%2C%20I'm%20Aman%20Kumar.png)
 ## Aman Kumar
 I'm a Techno-Management Guy.Have a knack for problem-solving and Project Planning.Enjoy to innovate and implement real life solutions.My aim is to develop a solution for the benefit of the society.
 
