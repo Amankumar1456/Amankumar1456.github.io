@@ -4,7 +4,21 @@
 
 <p align="left"> <a href="https://twitter.com/amankumar1456" target="blank"><img src="https://img.shields.io/twitter/follow/amankumar1456?logo=twitter&style=for-the-badge" alt="amankumar1456" /></a> </p>
 
+- 🔭 I’m currently working on **Full-stack-Game-Development**
+
+- 🌱 I’m currently learning **Web3 Application Development**
+
+- 👯 I’m looking to collaborate on **AR/VR | System Design**
+
+- 🤝 I’m looking for help with **Web3 Tech**
+
+- 👨‍💻 All of my projects are available at [github.com/amankumar1456](github.com/amankumar1456)
+
 - 💬 Ask me about **System Design, Augmented/Virtual reality**
+
+- 📫 How to reach me **amankumar1456@gmail.com**
+
+- ⚡ Fun fact **I like to travel🚵🪂**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
