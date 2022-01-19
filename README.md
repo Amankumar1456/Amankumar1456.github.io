@@ -45,7 +45,7 @@
 * Scholarship Qualifier, WiCyS 2021 Conference, Denver USA
 
 ## Snaps of some of my Games
-<img src="/gameDemo.gif" width=50% height=50%>
+<img src="/gameDemo.gif" width=70% height=70%>
 
 Here are some [🦜 parrots](https://cultofthepartyparrot.com):
 
