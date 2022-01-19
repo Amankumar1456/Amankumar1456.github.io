@@ -37,6 +37,16 @@
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=amankumar1456&show_icons=true&locale=en&layout=compact" alt="amankumar1456" /></p>
 
+## My Proud Moments🤹🏻🏆
+* 2nd Rank, Secur’IT Cup 2020, Kaspersky, International level
+* 3rd Rank, Smart India Hackathon National Level By MHRD, Government of India, 2020
+* Vice-President(2020-2021) and Co-founder at WiCys VIT Bhopal Students Chapter
+* High Commendation Award at VITB MUN'19
+* Scholarship Qualifier, WiCyS 2021 Conference, Denver USA
+
+## Snaps of some of my Games
+
+
 Here are some [🦜 parrots](https://cultofthepartyparrot.com):
 
 <div>
