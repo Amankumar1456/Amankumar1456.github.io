@@ -1,6 +1,6 @@
 ![myPic](./Hi%2C%20I'm%20Aman%20Kumar.png)
-<h1 align="center">Hi 👋, I'm Aman Kumar</h1>
-<h3 align="center">I'm a Techno-Management Guy.Have a knack for problem-solving and Project Planning.Enjoy to innovate and implement real life solutions.My aim is to develop a solution for the benefit of the society.</h3>
+<p align="center">Hi 👋, I'm Aman Kumar</p>
+<p align="center">I'm a Techno-Management Guy.Have a knack for problem-solving and Project Planning.Enjoy to innovate and implement real life solutions.My aim is to develop a solution for the benefit of the society.</p>
 
 <p align="left"> <a href="https://twitter.com/amankumar1456" target="blank"><img src="https://img.shields.io/twitter/follow/amankumar1456?logo=twitter&style=for-the-badge" alt="amankumar1456" /></a> </p>
 
